@@ -3,7 +3,7 @@ import image1 from "../../img/product-1.jpg";
 import image2 from "../../img/product-2.jpg";
 import image3 from "../../img/product-3.jpg";
 import image4 from "../../img/product-4.jpg";
-import ProductCard from "../Layout/ProductCard";
+import ProductCard from "../../Component/Layout/ProductCard";
 
 export default class Home extends Component {
   render() {

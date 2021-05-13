@@ -1,12 +1,12 @@
 import React from "react";
-import Home from "./Component/Routing/Home";
-import ShopPage from "./Component/Routing/ShopPage";
-import SingleProduct from "./Component/Routing/SingleProduct";
-import Cart from "./Component/Routing/Cart";
-import Checkout from "./Component/Routing/Checkout";
-import Category from "./Component/Routing/Category";
-import Other from "./Component/Routing/Other";
-import Contact from "./Component/Routing/Contact";
+import Home from "./Pages/Routing/Home";
+import ShopPage from "./Pages/Routing/ShopPage";
+import SingleProduct from "./Pages/Routing/SingleProduct";
+import Cart from "./Pages/Routing/Cart";
+import Checkout from "./Pages/Routing/Checkout";
+import Category from "./Pages/Routing/Category";
+import Other from "./Pages/Routing/Other";
+import Contact from "./Pages/Routing/Contact";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 
