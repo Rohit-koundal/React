@@ -9,8 +9,26 @@ import image7 from "../../img/product-4.jpg";
 import image8 from "../../img/product-5.jpg";
 export default class SingleProduct extends Component {
   render() {
-    const array = [image4, image5, image6, image7, image8];
-    const images = [image1, image1, image1, image1];
+    const array = [
+      { img: image4, name: "nokia", price: "700", del: "100" },
+      { img: image5, name: "Samsung", price: "800", del: "200" },
+      { img: image6, name: "Micromax", price: "900", del: "300" },
+      { img: image7, name: "Realme", price: "600", del: "100" },
+      { img: image8, name: "Apple", price: "700", del: "100" },
+    ];
+    const name = [
+      "Sony Smart TV - 2015",
+      "Sony Smart TV - 2015",
+      "Sony Smart TV - 2015",
+      "Sony Smart TV - 2015",
+      "Sony Smart TV - 2015",
+    ];
+    const images = [
+      { img: image1, name: "Sony Smart TV - 2015", price: "700", del: "100" },
+      { img: image1, name: "Sony Smart TV - 2015", price: "700", del: "100" },
+      { img: image1, name: "Sony Smart TV - 2015", price: "700", del: "100" },
+      { img: image1, name: "Sony Smart TV - 2015", price: "700", del: "100" },
+    ];
     const img = [image1, image2, image3];
     return (
       <div>
@@ -43,12 +61,12 @@ export default class SingleProduct extends Component {
                   <h2 class="sidebar-title">Products</h2>
                   {images.map((data) => (
                     <div class="thubmnail-recent">
-                      <img src={data} class="recent-thumb" alt="" />
+                      <img src={data.img} class="recent-thumb" alt="" />
                       <h2>
-                        <a href="">Sony Smart TV - 2015</a>
+                        <a href="">{data.name}</a>
                       </h2>
                       <div class="product-sidebar-price">
-                        <ins>$700.00</ins> <del>$100.00</del>
+                        <ins>${data.price}.00</ins> <del>${data.del}.00</del>
                       </div>
                     </div>
                   ))}
@@ -57,21 +75,11 @@ export default class SingleProduct extends Component {
                 <div class="single-sidebar">
                   <h2 class="sidebar-title">Recent Posts</h2>
                   <ul>
-                    <li>
-                      <a href="">Sony Smart TV - 2015</a>
-                    </li>
-                    <li>
-                      <a href="">Sony Smart TV - 2015</a>
-                    </li>
-                    <li>
-                      <a href="">Sony Smart TV - 2015</a>
-                    </li>
-                    <li>
-                      <a href="">Sony Smart TV - 2015</a>
-                    </li>
-                    <li>
-                      <a href="">Sony Smart TV - 2015</a>
-                    </li>
+                    {name.map((data) => (
+                      <li>
+                        <a href="">{data}</a>
+                      </li>
+                    ))}
                   </ul>
                 </div>
               </div>
@@ -156,11 +164,11 @@ export default class SingleProduct extends Component {
 
                   <div class="related-products-wrapper">
                     <h2 class="related-products-title">Related Products</h2>
-                    {array.map((data) => (
+                    {array.map((data, index) => (
                       <div class="related-products-carousel">
                         <div class="single-product">
                           <div class="product-f-image">
-                            <img src={data} alt="" />
+                            <img src={data.img} alt="" />
                             <div class="product-hover">
                               <a href="" class="add-to-cart-link">
                                 <i class="fa fa-shopping-cart"></i> Add to cart
@@ -172,11 +180,12 @@ export default class SingleProduct extends Component {
                           </div>
 
                           <h2>
-                            <a href="">Sony Smart TV - 2015</a>
+                            <a href="">{data.name}</a>
                           </h2>
 
                           <div class="product-carousel-price">
-                            <ins>$700.00</ins> <del>$100.00</del>
+                            <ins>${data.price}.00</ins>{" "}
+                            <del>${data.del}.00</del>
                           </div>
                         </div>
                       </div>
