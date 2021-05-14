@@ -7,34 +7,19 @@ import ProductCard from "../../Component/Layout/ProductCard";
 
 export default class Home extends Component {
   render() {
+    const image = [image1, image2, image3, image4];
     return (
       <div>
         <div className="h1 text-center">Latest Product</div>
         <div className="container mr-5 card-group">
-          <ProductCard
-            image={image1}
-            title="Apple new mac book 2015"
-            text="
+          {image.map((data) => (
+            <ProductCard
+              image={data}
+              title="Apple new mac book 2015"
+              text="
 $899.00"
-          />
-          <ProductCard
-            image={image2}
-            title="Apple new mac book 2015"
-            text="
-$899.00"
-          />
-          <ProductCard
-            image={image3}
-            title="Apple new mac book 2015"
-            text="
-$899.00"
-          />
-          <ProductCard
-            image={image4}
-            title="Apple new mac book 2015"
-            text="
-$899.00"
-          />
+            />
+          ))}
         </div>
         <br></br>
       </div>

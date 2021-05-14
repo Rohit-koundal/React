@@ -1,6 +1,12 @@
 import React, { Component } from "react";
 import image1 from "../../img/product-thumb-1.jpg";
-
+import image2 from "../../img/product-thumb-2.jpg";
+import image3 from "../../img/product-thumb-3.jpg";
+import image4 from "../../img/product-2.jpg";
+import image5 from "../../img/product-1.jpg";
+import image6 from "../../img/product-3.jpg";
+import image7 from "../../img/product-4.jpg";
+import image8 from "../../img/product-5.jpg";
 export default class SingleProduct extends Component {
   render() {
     return (
@@ -104,13 +110,13 @@ export default class SingleProduct extends Component {
                     <div class="col-sm-6">
                       <div class="product-images">
                         <div class="product-main-img">
-                          <img src="img/product-2.jpg" alt="" />
+                          <img src={image4} alt="" />
                         </div>
 
                         <div class="product-gallery">
                           <img src={image1} alt="" />
-                          <img src="img/product-thumb-2.jpg" alt="" />
-                          <img src="img/product-thumb-3.jpg" alt="" />
+                          <img src={image2} alt="" />
+                          <img src={image3} alt="" />
                         </div>
                       </div>
                     </div>
@@ -253,7 +259,7 @@ export default class SingleProduct extends Component {
                     <div class="related-products-carousel">
                       <div class="single-product">
                         <div class="product-f-image">
-                          <img src="img/product-1.jpg" alt="" />
+                          <img src={image5} alt="" />
                           <div class="product-hover">
                             <a href="" class="add-to-cart-link">
                               <i class="fa fa-shopping-cart"></i> Add to cart
@@ -274,7 +280,7 @@ export default class SingleProduct extends Component {
                       </div>
                       <div class="single-product">
                         <div class="product-f-image">
-                          <img src="img/product-2.jpg" alt="" />
+                          <img src={image4} alt="" />
                           <div class="product-hover">
                             <a href="" class="add-to-cart-link">
                               <i class="fa fa-shopping-cart"></i> Add to cart
@@ -294,7 +300,7 @@ export default class SingleProduct extends Component {
                       </div>
                       <div class="single-product">
                         <div class="product-f-image">
-                          <img src="img/product-3.jpg" alt="" />
+                          <img src={image6} alt="" />
                           <div class="product-hover">
                             <a href="" class="add-to-cart-link">
                               <i class="fa fa-shopping-cart"></i> Add to cart
@@ -315,7 +321,7 @@ export default class SingleProduct extends Component {
                       </div>
                       <div class="single-product">
                         <div class="product-f-image">
-                          <img src="img/product-4.jpg" alt="" />
+                          <img src={image7} alt="" />
                           <div class="product-hover">
                             <a href="" class="add-to-cart-link">
                               <i class="fa fa-shopping-cart"></i> Add to cart
@@ -336,7 +342,7 @@ export default class SingleProduct extends Component {
                       </div>
                       <div class="single-product">
                         <div class="product-f-image">
-                          <img src="img/product-5.jpg" alt="" />
+                          <img src={image8} alt="" />
                           <div class="product-hover">
                             <a href="" class="add-to-cart-link">
                               <i class="fa fa-shopping-cart"></i> Add to cart
@@ -357,7 +363,7 @@ export default class SingleProduct extends Component {
                       </div>
                       <div class="single-product">
                         <div class="product-f-image">
-                          <img src="img/product-6.jpg" alt="" />
+                          <img src={image7} alt="" />
                           <div class="product-hover">
                             <a href="" class="add-to-cart-link">
                               <i class="fa fa-shopping-cart"></i> Add to cart

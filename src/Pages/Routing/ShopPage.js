@@ -8,6 +8,16 @@ import image5 from "../../img/product-5.jpg";
 import image6 from "../../img/product-6.jpg";
 export default class ShopPage extends Component {
   render() {
+    const image = [
+      image1,
+      image2,
+      image3,
+      image4,
+      image5,
+      image2,
+      image4,
+      image3,
+    ];
     return (
       <div>
         <div class="product-big-title-area">
@@ -23,52 +33,10 @@ export default class ShopPage extends Component {
         </div>
 
         <div class="single-product-area">
-          <div class="zigzag-bottom"></div>
-          <div class="container">
-            <div class="row card-group">
-              <Product img={image1} />
-              <Product img={image2} />
-              <Product img={image3} />
-              <Product img={image4} />
-              <Product img={image5} />
-              <Product img={image6} />
-            </div>
-
-            <div class="row">
-              <div class="col-md-12">
-                <div class="product-pagination text-center">
-                  <nav>
-                    <ul class="pagination">
-                      <li>
-                        <a href="#" aria-label="Previous">
-                          <span aria-hidden="true">&laquo;</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">1</a>
-                      </li>
-                      <li>
-                        <a href="#">2</a>
-                      </li>
-                      <li>
-                        <a href="#">3</a>
-                      </li>
-                      <li>
-                        <a href="#">4</a>
-                      </li>
-                      <li>
-                        <a href="#">5</a>
-                      </li>
-                      <li>
-                        <a href="#" aria-label="Next">
-                          <span aria-hidden="true">&raquo;</span>
-                        </a>
-                      </li>
-                    </ul>
-                  </nav>
-                </div>
-              </div>
-            </div>
+          <div class="container mr-5 card-group">
+            {image.map((data) => (
+              <Product img={data} />
+            ))}
           </div>
         </div>
       </div>
