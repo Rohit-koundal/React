@@ -9,6 +9,9 @@ import image7 from "../../img/product-4.jpg";
 import image8 from "../../img/product-5.jpg";
 export default class SingleProduct extends Component {
   render() {
+    const array = [image4, image5, image6, image7, image8];
+    const images = [image1, image1, image1, image1];
+    const img = [image1, image2, image3];
     return (
       <div>
         <div class="product-big-title-area">
@@ -38,42 +41,17 @@ export default class SingleProduct extends Component {
 
                 <div class="single-sidebar">
                   <h2 class="sidebar-title">Products</h2>
-                  <div class="thubmnail-recent">
-                    <img src={image1} class="recent-thumb" alt="" />
-                    <h2>
-                      <a href="">Sony Smart TV - 2015</a>
-                    </h2>
-                    <div class="product-sidebar-price">
-                      <ins>$700.00</ins> <del>$100.00</del>
+                  {images.map((data) => (
+                    <div class="thubmnail-recent">
+                      <img src={data} class="recent-thumb" alt="" />
+                      <h2>
+                        <a href="">Sony Smart TV - 2015</a>
+                      </h2>
+                      <div class="product-sidebar-price">
+                        <ins>$700.00</ins> <del>$100.00</del>
+                      </div>
                     </div>
-                  </div>
-                  <div class="thubmnail-recent">
-                    <img src={image1} class="recent-thumb" alt="" />
-                    <h2>
-                      <a href="">Sony Smart TV - 2015</a>
-                    </h2>
-                    <div class="product-sidebar-price">
-                      <ins>$700.00</ins> <del>$100.00</del>
-                    </div>
-                  </div>
-                  <div class="thubmnail-recent">
-                    <img src={image1} class="recent-thumb" alt="" />
-                    <h2>
-                      <a href="">Sony Smart TV - 2015</a>
-                    </h2>
-                    <div class="product-sidebar-price">
-                      <ins>$700.00</ins> <del>$100.00</del>
-                    </div>
-                  </div>
-                  <div class="thubmnail-recent">
-                    <img src={image1} class="recent-thumb" alt="" />
-                    <h2>
-                      <a href="">Sony Smart TV - 2015</a>
-                    </h2>
-                    <div class="product-sidebar-price">
-                      <ins>$700.00</ins> <del>$100.00</del>
-                    </div>
-                  </div>
+                  ))}
                 </div>
 
                 <div class="single-sidebar">
@@ -100,12 +78,6 @@ export default class SingleProduct extends Component {
 
               <div class="col-md-8">
                 <div class="product-content-right">
-                  <div class="product-breadcroumb">
-                    <a href="">Home</a>
-                    <a href="">Category Name</a>
-                    <a href="">Sony Smart TV - 2015</a>
-                  </div>
-
                   <div class="row">
                     <div class="col-sm-6">
                       <div class="product-images">
@@ -114,9 +86,9 @@ export default class SingleProduct extends Component {
                         </div>
 
                         <div class="product-gallery">
-                          <img src={image1} alt="" />
-                          <img src={image2} alt="" />
-                          <img src={image3} alt="" />
+                          {img.map((data) => (
+                            <img src={data} alt="" />
+                          ))}
                         </div>
                       </div>
                     </div>
@@ -177,78 +149,6 @@ export default class SingleProduct extends Component {
                               </a>
                             </li>
                           </ul>
-                          <div class="tab-content">
-                            <div
-                              role="tabpanel"
-                              class="tab-pane fade in active"
-                              id="home"
-                            >
-                              <h2>Product Description</h2>
-                              <p>
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipiscing elit. Nam tristique, diam in
-                                consequat iaculis, est purus iaculis mauris,
-                                imperdiet facilisis ante ligula at nulla.
-                                Quisque volutpat nulla risus, id maximus ex
-                                aliquet ut. Suspendisse potenti. Nulla varius
-                                lectus id turpis dignissim porta. Quisque magna
-                                arcu, blandit quis felis vehicula, feugiat
-                                gravida diam. Nullam nec turpis ligula. Aliquam
-                                quis blandit elit, ac sodales nisl. Aliquam eget
-                                dolor eget elit malesuada aliquet. In varius
-                                lorem lorem, semper bibendum lectus lobortis ac.
-                              </p>
-
-                              <p>
-                                Mauris placerat vitae lorem gravida viverra.
-                                Mauris in fringilla ex. Nulla facilisi. Etiam
-                                scelerisque tincidunt quam facilisis lobortis.
-                                In malesuada pulvinar neque a consectetur. Nunc
-                                aliquam gravida purus, non malesuada sem
-                                accumsan in. Morbi vel sodales libero.
-                              </p>
-                            </div>
-                            <div
-                              role="tabpanel"
-                              class="tab-pane fade"
-                              id="profile"
-                            >
-                              <h2>Reviews</h2>
-                              <div class="submit-review">
-                                <p>
-                                  <label for="name">Name</label>{" "}
-                                  <input name="name" type="text" />
-                                </p>
-                                <p>
-                                  <label for="email">Email</label>{" "}
-                                  <input name="email" type="email" />
-                                </p>
-                                <div class="rating-chooser">
-                                  <p>Your rating</p>
-
-                                  <div class="rating-wrap-post">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                  </div>
-                                </div>
-                                <p>
-                                  <label for="review">Your review</label>{" "}
-                                  <textarea
-                                    name="review"
-                                    id=""
-                                    cols="30"
-                                    rows="10"
-                                  ></textarea>
-                                </p>
-                                <p>
-                                  <input type="submit" value="Submit" />
-                                </p>
-                              </div>
-                            </div>
-                          </div>
                         </div>
                       </div>
                     </div>
@@ -256,133 +156,31 @@ export default class SingleProduct extends Component {
 
                   <div class="related-products-wrapper">
                     <h2 class="related-products-title">Related Products</h2>
-                    <div class="related-products-carousel">
-                      <div class="single-product">
-                        <div class="product-f-image">
-                          <img src={image5} alt="" />
-                          <div class="product-hover">
-                            <a href="" class="add-to-cart-link">
-                              <i class="fa fa-shopping-cart"></i> Add to cart
-                            </a>
-                            <a href="" class="view-details-link">
-                              <i class="fa fa-link"></i> See details
-                            </a>
+                    {array.map((data) => (
+                      <div class="related-products-carousel">
+                        <div class="single-product">
+                          <div class="product-f-image">
+                            <img src={data} alt="" />
+                            <div class="product-hover">
+                              <a href="" class="add-to-cart-link">
+                                <i class="fa fa-shopping-cart"></i> Add to cart
+                              </a>
+                              <a href="" class="view-details-link">
+                                <i class="fa fa-link"></i> See details
+                              </a>
+                            </div>
+                          </div>
+
+                          <h2>
+                            <a href="">Sony Smart TV - 2015</a>
+                          </h2>
+
+                          <div class="product-carousel-price">
+                            <ins>$700.00</ins> <del>$100.00</del>
                           </div>
                         </div>
-
-                        <h2>
-                          <a href="">Sony Smart TV - 2015</a>
-                        </h2>
-
-                        <div class="product-carousel-price">
-                          <ins>$700.00</ins> <del>$100.00</del>
-                        </div>
                       </div>
-                      <div class="single-product">
-                        <div class="product-f-image">
-                          <img src={image4} alt="" />
-                          <div class="product-hover">
-                            <a href="" class="add-to-cart-link">
-                              <i class="fa fa-shopping-cart"></i> Add to cart
-                            </a>
-                            <a href="" class="view-details-link">
-                              <i class="fa fa-link"></i> See details
-                            </a>
-                          </div>
-                        </div>
-
-                        <h2>
-                          <a href="">Apple new mac book 2015 March :P</a>
-                        </h2>
-                        <div class="product-carousel-price">
-                          <ins>$899.00</ins> <del>$999.00</del>
-                        </div>
-                      </div>
-                      <div class="single-product">
-                        <div class="product-f-image">
-                          <img src={image6} alt="" />
-                          <div class="product-hover">
-                            <a href="" class="add-to-cart-link">
-                              <i class="fa fa-shopping-cart"></i> Add to cart
-                            </a>
-                            <a href="" class="view-details-link">
-                              <i class="fa fa-link"></i> See details
-                            </a>
-                          </div>
-                        </div>
-
-                        <h2>
-                          <a href="">Apple new i phone 6</a>
-                        </h2>
-
-                        <div class="product-carousel-price">
-                          <ins>$400.00</ins> <del>$425.00</del>
-                        </div>
-                      </div>
-                      <div class="single-product">
-                        <div class="product-f-image">
-                          <img src={image7} alt="" />
-                          <div class="product-hover">
-                            <a href="" class="add-to-cart-link">
-                              <i class="fa fa-shopping-cart"></i> Add to cart
-                            </a>
-                            <a href="" class="view-details-link">
-                              <i class="fa fa-link"></i> See details
-                            </a>
-                          </div>
-                        </div>
-
-                        <h2>
-                          <a href="">Sony playstation microsoft</a>
-                        </h2>
-
-                        <div class="product-carousel-price">
-                          <ins>$200.00</ins> <del>$225.00</del>
-                        </div>
-                      </div>
-                      <div class="single-product">
-                        <div class="product-f-image">
-                          <img src={image8} alt="" />
-                          <div class="product-hover">
-                            <a href="" class="add-to-cart-link">
-                              <i class="fa fa-shopping-cart"></i> Add to cart
-                            </a>
-                            <a href="" class="view-details-link">
-                              <i class="fa fa-link"></i> See details
-                            </a>
-                          </div>
-                        </div>
-
-                        <h2>
-                          <a href="">Sony Smart Air Condtion</a>
-                        </h2>
-
-                        <div class="product-carousel-price">
-                          <ins>$1200.00</ins> <del>$1355.00</del>
-                        </div>
-                      </div>
-                      <div class="single-product">
-                        <div class="product-f-image">
-                          <img src={image7} alt="" />
-                          <div class="product-hover">
-                            <a href="" class="add-to-cart-link">
-                              <i class="fa fa-shopping-cart"></i> Add to cart
-                            </a>
-                            <a href="" class="view-details-link">
-                              <i class="fa fa-link"></i> See details
-                            </a>
-                          </div>
-                        </div>
-
-                        <h2>
-                          <a href="">Samsung gallaxy note 4</a>
-                        </h2>
-
-                        <div class="product-carousel-price">
-                          <ins>$400.00</ins>
-                        </div>
-                      </div>
-                    </div>
+                    ))}
                   </div>
                 </div>
               </div>
